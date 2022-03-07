@@ -48,7 +48,7 @@ def repartir_cartas(cartas_iniciales,repeticiones):
         combinaciones["repeticion"+str(i)]=[]
         for j in range(0,5):
             carta=random.choice(cartas_aleatorias)
-            combinaciones["repeticion"+str(j)].append(carta)
+            combinaciones["repeticion"+str(i)].append(carta)
             cartas_aleatorias.remove(carta)
 
     return combinaciones

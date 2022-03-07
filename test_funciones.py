@@ -12,8 +12,9 @@ def test_encontrar_menores():
     }
 
     #comprobamos que las palabras con letras anteriores a 'B' son las siguientes
-    ##lista=encontrar_menores(diccionario,'B')
-    ##assert lista == ['AUNQUE','ABINAR']
+    ##
+    lista=encontrar_menores(diccionario,'B')
+    assert lista == ['AUNQUE','ABINAR']
     
 
     #comprobamos que las palabras con letras anteriores a 'J' son las siguientes
