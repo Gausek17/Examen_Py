@@ -75,6 +75,7 @@ def choose_secret_advanced(filename):
       selected: Lista de 15 palabras aleatorias no repetidas que tienen 5 letras y no tienen acentos
       secret: Palabra elegida aleatoriamente de la lista de 15 seleccionadas transformada a mayúsculas
     """
+
     filename="palabras_extended.txt"
     with open(filename,mode="rt", encoding='utf-8') as f:
       lines = f.read().split()
@@ -100,6 +101,8 @@ def check_valid_word(selected):
     Returns:
       word: Palabra introducida por el usuario que está en la lista.
     """
+
+    
     word = input()
     while word not in selected:
       print("Introduzca una palabra que esté en la lista:")
