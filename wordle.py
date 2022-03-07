@@ -57,6 +57,20 @@ def choose_secret_advanced(filename):
       secret: Palabra elegida aleatoriamente de la lista de 15 seleccionadas transformada a mayúsculas
     """
     filename="palabras_extended.txt"
+    with open(filename, encoding='utf-8') as f:
+      lines = f.read().split()
+      palabras = []
+      for line in lines:
+        palabras.extend(line.split())
+        palabras = list(filter(lambda word: len(word) == 5 and word.isalpha(), palabras))
+        selected = list(palabras)
+        secret = ''
+        for word in selected:
+          secret = word.upper()
+    return {
+      'selected': selected,
+      'secret': secret
+            }
 
   
  

@@ -1,7 +1,8 @@
 import random
 
 def encontrar_menores(diccionario,letra):
-    """Dado un diccionario de palabras, y una letra, esta función devuelve la lista de palabras que empiezan por una letra que alfabéticamente está antes que la indicada.
+    """Dado un diccionario de palabras, y una letra, esta función devuelve la lista de palabras que empiezan por una letra 
+    que alfabéticamente está antes que la indicada.
     Args:
       diccionario
       letra
@@ -47,9 +48,10 @@ def repartir_cartas(cartas_iniciales,repeticiones):
         combinaciones["repeticion"+str(i)]=[]
         for j in range(0,5):
             carta=random.choice(cartas_aleatorias)
-            combinaciones["repeticion"+str(i)].append(carta)
+            combinaciones["repeticion"+str(j)].append(carta)
             cartas_aleatorias.remove(carta)
 
     return combinaciones
-
+    ##El problema de esta función es que la variable j no se usa por lo que nunca podremos probar cuando se tengan 0 cartas. Por ello,
+    # debermos cambiar combinaciones["repeticion"+str(i)].append(carta) por combinaciones["repeticion"+str(j)].append(carta)
     
