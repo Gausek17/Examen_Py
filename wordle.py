@@ -32,7 +32,9 @@ def compare_words(word,secret):
 
 
 def print_word(word,same_letter_position,same_letter):
-    """Dada una palabra, una lista same_position y otra lista same_letter, esta función creará un string donde aparezcan en mayúsculas las letras de la palabra que ocupen las posiciones de same_position, en minúsculas las letras de la palabra que ocupen las posiciones de same_letter y un guión (-) en el resto de posiciones
+    """Dada una palabra, una lista same_position y otra lista same_letter, esta función creará un string donde aparezcan en mayúsculas 
+    las letras de la palabra que ocupen las posiciones de same_position, en minúsculas las letras de la palabra que ocupen las posiciones de same_letter 
+    y un guión (-) en el resto de posiciones.
     Args:
       word: Una palabra. Ej. "CAMPO"
       same_letter_position: Lista de posiciones. Ej. [0]
@@ -40,6 +42,21 @@ def print_word(word,same_letter_position,same_letter):
     Returns:
       transformed: La palabra aplicando las transformaciones. En el caso anterior: "Cam--"
     """
+
+    
+    """
+    transformed = ''
+
+    for i in range(0, len(word)):
+
+      if word[i] == same_position[0]:
+        transformed = transformed + word[i]
+      else:
+        transformed = transformed + '-'
+    return transformed
+    """
+
+
     transformed = word
     for letter in word:
       if letter == same_letter[0]:
@@ -97,7 +114,7 @@ if __name__ == "__main__":
     for repeticiones in range(0,6):
         word = input("Introduce una nueva palabra: ")
         same_position, same_letter = compare_words(word,secret)
-        resultado=print_word(word,same_letter)
+        resultado=print_word(word,same_position,same_letter)
         print(resultado)
         if word == secret:
             print("HAS GANADO!!")

@@ -52,6 +52,5 @@ def repartir_cartas(cartas_iniciales,repeticiones):
             cartas_aleatorias.remove(carta)
 
     return combinaciones
-    ##El problema de esta función es que la variable j no se usa por lo que nunca podremos probar cuando se tengan 0 cartas. Por ello,
-    # debermos cambiar combinaciones["repeticion"+str(i)].append(carta) por combinaciones["repeticion"+str(j)].append(carta)
+    
     
